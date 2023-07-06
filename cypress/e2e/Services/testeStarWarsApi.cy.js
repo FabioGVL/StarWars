@@ -74,7 +74,7 @@ it('Validação da Pesquisa por R2-D2', () => {
 });
 
 
-it.only('Validação da Pesquisa por Darth Vader', () => {
+it('Validação da Pesquisa por Darth Vader', () => {
 
     cy.request({
         method:"GET",
