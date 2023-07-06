@@ -19,7 +19,6 @@ jobs:
       - name: Install Cypress
         run: |
              npm install cypress
-             npm update
              npx verify
 
       # Executa os testes com Cypress
