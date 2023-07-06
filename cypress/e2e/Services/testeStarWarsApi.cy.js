@@ -1,4 +1,4 @@
-it('Validação da Pesquisa por Luke Skywalker', () => {
+it('Validação das informações de Luke Skywalker', () => {
     cy.request({
         method:"GET",
         url: "people/1/"
@@ -22,7 +22,7 @@ it('Validação da Pesquisa por Luke Skywalker', () => {
 });
 
 
-it('Validação da Pesquisa por C-3PO', () => {
+it('Validação das informações de C-3PO', () => {
     cy.request({
         method:"GET",
         url: "people/2/"
@@ -48,7 +48,7 @@ it('Validação da Pesquisa por C-3PO', () => {
 });
 
 
-it('Validação da Pesquisa por R2-D2', () => {
+it('Validação das informações de R2-D2', () => {
     cy.request({
         method:"GET",
         url: "people/3/"
@@ -74,7 +74,7 @@ it('Validação da Pesquisa por R2-D2', () => {
 });
 
 
-it('Validação da Pesquisa por Darth Vader', () => {
+it('Validação das informações de Darth Vader', () => {
 
     cy.request({
         method:"GET",
@@ -103,7 +103,7 @@ it('Validação da Pesquisa por Darth Vader', () => {
 }); 
 
 
-it('Validação da Pesquisa por Leia Organa', () => {
+it('Validação das informações de Leia Organa', () => {
     cy.request({
         method:"GET",
         url: "people/5/"
@@ -130,7 +130,7 @@ it('Validação da Pesquisa por Leia Organa', () => {
 });
 
 
-it('Validação da Pesquisa por Owen Lars', () => {
+it('Validação das informações de Owen Lars', () => {
     cy.request({
         method:"GET",
         url: "people/6/"
@@ -156,7 +156,7 @@ it('Validação da Pesquisa por Owen Lars', () => {
 });
 
 
-it('Validação da Pesquisa por Beru Whitesun lars', () => {
+it('Validação das informações de Beru Whitesun lars', () => {
     cy.request({
         method:"GET",
         url: "people/7/"
@@ -181,7 +181,7 @@ it('Validação da Pesquisa por Beru Whitesun lars', () => {
 });
 
 
-it('Validação da Pesquisa por R5-D4', () => {
+it('Validação das informações de R5-D4', () => {
     cy.request({
         method:"GET",
         url: "people/8/"
@@ -204,7 +204,7 @@ it('Validação da Pesquisa por R5-D4', () => {
 });
 
 
-it('Validação da Pesquisa por Biggs Darklighter', () => {
+it('Validação das informações de Biggs Darklighter', () => {
     cy.request({
         method:"GET",
         url: "people/9/"
@@ -230,7 +230,7 @@ it('Validação de ID inexistente', () => {
     cy.request({
         failOnStatusCode: false,
         method:"GET",
-        url: "people/84/"
+        url: "people/0/"
     }).then((response)=>{
         expect(response.status).to.eq(404)
         expect(response.body.detail).to.eq("Not found")
@@ -269,7 +269,7 @@ it('Validação da listagem de personagens', () => {
         expect(response.body.results[1].name).to.eq("Tion Medon")
         expect(response.body.results[1].url).to.eq("https://swapi.dev/api/people/83/")
 
-       var personagemInexistente = cy.request({ failOnStatusCode: false, method:"GET", url: "people/17/"})
+       var personagemInexistente = cy.request({failOnStatusCode: false, method:"GET", url: "people/17/"})
 
         }).then((response)=>{
 
