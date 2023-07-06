@@ -16,11 +16,6 @@ jobs:
       - uses: actions/checkout@v3
 
       # Instala as dependências do Cypress
-      - name: Install Cypress
-        run: |
-             npm install cypress
-             npx verify
-
       # Executa os testes com Cypress
-      - name: Run Cypress tests
-        run: npx cypress run
+      - name: Cypress run
+        uses: cypress-io/github-action@v5
