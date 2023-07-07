@@ -1,4 +1,4 @@
-it('Validação das informações de Luke Skywalker OK 100%', () => {
+it('Validação das informações de Luke Skywalker', () => {
     cy.request({
         method:"GET",
         url: "people/1/"
@@ -108,7 +108,7 @@ it('Validação de filmes do personagem Luke SkyWalker', () => {
 });
 
 
-it('Validação de espécies associadas ao personagem Luke SkyWalker OK 100%', () => {
+it('Validação de espécies associadas ao personagem Luke SkyWalker', () => {
     cy.request({
         method:"GET",
         url: "people/1/"
@@ -120,7 +120,7 @@ it('Validação de espécies associadas ao personagem Luke SkyWalker OK 100%', (
 });
 
 
-it('Validação de veículos associados ao personagem Luke SkyWalker OK 100%', () => {
+it('Validação de veículos associados ao personagem Luke SkyWalker', () => {
     cy.request({
         method:"GET",
         url: "vehicles/14/"
@@ -171,7 +171,7 @@ it('Validação de veículos associados ao personagem Luke SkyWalker OK 100%', (
 });        
   
 
-it('Validação de espaçonaves associadas ao personagem Luke SkyWalker OK 100%', () => {
+it('Validação de espaçonaves associadas ao personagem Luke SkyWalker', () => {
     cy.request({
         method:"GET",
         url: "starships/12/"
@@ -225,7 +225,7 @@ it('Validação de espaçonaves associadas ao personagem Luke SkyWalker OK 100%'
 });
 
 
-it('Validação das informações de C-3PO OK 100%', () => {
+it('Validação das informações de C-3PO', () => {
     cy.request({
         method:"GET",
         url: "people/2/"
@@ -362,7 +362,7 @@ it('Validação de filmes do personagem C-3PO', () => {
 });
 
 
-it('Validação de espécies associadas ao personagem C-3PO OK 100%', () => {
+it('Validação de espécies associadas ao personagem C-3PO', () => {
     cy.request({
         method:"GET",
         url: "species/2/"
@@ -407,7 +407,7 @@ it('Validação de veículos associados ao personagem C-3PO 100%', () => {
 });        
   
 
-it('Validação de espaçonaves associadas ao personagem C-3PO OK 100%', () => {
+it('Validação de espaçonaves associadas ao personagem C-3PO', () => {
     cy.request({
         method:"GET",
         url: "people/2/"
@@ -419,7 +419,7 @@ it('Validação de espaçonaves associadas ao personagem C-3PO OK 100%', () => {
 });
 
 
-it('Validação das informações de R2-D2 OK 100%', () => {
+it('Validação das informações de R2-D2', () => {
     cy.request({
         method:"GET",
         url: "people/3/"
@@ -456,7 +456,7 @@ it('Validação das informações de R2-D2 OK 100%', () => {
 });
 
 
-it('Validação de filmes do personagem R2-D2 OK 100%', () => {
+it('Validação de filmes do personagem R2-D2', () => {
     cy.request({
         method:"GET",
         url: "films/1/"
@@ -557,7 +557,7 @@ it('Validação de filmes do personagem R2-D2 OK 100%', () => {
 });
 
 
-it('Validação de espécies associadas ao personagem R2-D2 OK', () => {
+it('Validação de espécies associadas ao personagem R2-D2 ', () => {
     cy.request({
         method:"GET",
         url: "species/2/"
@@ -590,7 +590,7 @@ it('Validação de espécies associadas ao personagem R2-D2 OK', () => {
 });
 
 
-it('Validação de veículos associados ao personagem R2-D2 OK 100%', () => {
+it('Validação de veículos associados ao personagem R2-D2', () => {
     cy.request({
         method:"GET",
         url: "people/3/"
@@ -602,7 +602,7 @@ it('Validação de veículos associados ao personagem R2-D2 OK 100%', () => {
 });        
   
 
-it('Validação de espaçonaves associadas ao personagem R2-D2 OK 100%', () => {
+it('Validação de espaçonaves associadas ao personagem R2-D2', () => {
     cy.request({
         method:"GET",
         url: "people/3/"
@@ -614,7 +614,7 @@ it('Validação de espaçonaves associadas ao personagem R2-D2 OK 100%', () => {
 }); 
 
 
-it('Validação das informações de Darth Vader OK 100%', () => {
+it('Validação das informações de Darth Vader', () => {
 
     cy.request({
         method:"GET",
@@ -719,7 +719,7 @@ it('Validação de filmes do personagem Darth Vader', () => {
 });
 
 
-it('Validação de espécies associadas ao personagem Darth Vader OK 100%', () => {
+it('Validação de espécies associadas ao personagem Darth Vader', () => {
     cy.request({
         method:"GET",
         url: "people/4/"
@@ -731,7 +731,7 @@ it('Validação de espécies associadas ao personagem Darth Vader OK 100%', () =
 });
 
 
-it('Validação de veículos associados ao personagem Darth Vader OK 100%', () => {
+it('Validação de veículos associados ao personagem Darth Vader', () => {
     cy.request({
         method:"GET",
         url: "people/4/"
@@ -743,7 +743,7 @@ it('Validação de veículos associados ao personagem Darth Vader OK 100%', () =
 });        
   
 
-it('Validação de espaçonaves associadas ao personagem Darth Vader OK 100%', () => {
+it('Validação de espaçonaves associadas ao personagem Darth Vader', () => {
     cy.request({
         method:"GET",
         url: "starships/13/" 
@@ -877,7 +877,7 @@ it('Validação de filmes da personagem Leia Organa ', () => {
 });
 
 
-it('Validação de espécies associadas ao personagem Leia Organa OK 100%', () => {
+it('Validação de espécies associadas ao personagem Leia Organa', () => {
     cy.request({
         method:"GET",
         url: "people/5/"
@@ -889,7 +889,7 @@ it('Validação de espécies associadas ao personagem Leia Organa OK 100%', () =
 });
 
 
-it('Validação de veículos associados ao personagem Leia Organa OK 100%', () => {
+it('Validação de veículos associados ao personagem Leia Organa', () => {
     
     cy.request({
         method:"GET", 
@@ -919,7 +919,7 @@ it('Validação de veículos associados ao personagem Leia Organa OK 100%', () =
 });        
   
 
-it('Validação de espaçonaves associadas ao personagem Leia Organa OK 100%', () => {
+it('Validação de espaçonaves associadas ao personagem Leia Organa', () => {
     cy.request({
         method:"GET",
         url: "people/5/"
@@ -931,7 +931,7 @@ it('Validação de espaçonaves associadas ao personagem Leia Organa OK 100%', (
 });
 
 
-it('Validação das informações de Owen Lars OK 100%', () => {
+it('Validação das informações de Owen Lars', () => {
     cy.request({
         method:"GET",
         url: "people/6/"
@@ -1019,7 +1019,7 @@ it('Validação de filmes da personagem Owen Lars', () => {
 });
 
 
-it('Validação de espécies associadas ao personagem Owen Lars OK 100%', () => {
+it('Validação de espécies associadas ao personagem Owen Lars', () => {
     cy.request({
         method:"GET",
         url: "people/6/"
@@ -1031,7 +1031,7 @@ it('Validação de espécies associadas ao personagem Owen Lars OK 100%', () => 
 });
 
 
-it('Validação de veículos associados ao personagem Owen Lars OK 100%', () => {
+it('Validação de veículos associados ao personagem Owen Lars', () => {
     cy.request({
         method:"GET",
         url: "people/6/"
@@ -1043,7 +1043,7 @@ it('Validação de veículos associados ao personagem Owen Lars OK 100%', () => 
 });        
   
 
-it('Validação de espaçonaves associadas ao personagem Owen Lars OK 100%', () => {
+it('Validação de espaçonaves associadas ao personagem Owen Lars', () => {
     cy.request({
         method:"GET",
         url: "people/6/"
@@ -1055,7 +1055,7 @@ it('Validação de espaçonaves associadas ao personagem Owen Lars OK 100%', () 
 });
 
 
-it('Validação das informações de Beru Whitesun lars OK 100%', () => {
+it('Validação das informações de Beru Whitesun lars', () => {
     cy.request({
         method:"GET",
         url: "people/7/"
@@ -1142,7 +1142,7 @@ it('Validação de filmes da personagem Beru Whitesun lars', () => {
 });
 
 
-it('Validação de espécies associadas ao personagem Beru Whitesun lars OK 100%', () => {
+it('Validação de espécies associadas ao personagem Beru Whitesun lars', () => {
     cy.request({
         method:"GET",
         url: "people/7/"
@@ -1154,7 +1154,7 @@ it('Validação de espécies associadas ao personagem Beru Whitesun lars OK 100%
 });
 
 
-it('Validação de veículos associados ao personagem Beru Whitesun lars OK 100%', () => {
+it('Validação de veículos associados ao personagem Beru Whitesun lars', () => {
     cy.request({
         method:"GET",
         url: "people/7/"
@@ -1166,7 +1166,7 @@ it('Validação de veículos associados ao personagem Beru Whitesun lars OK 100%
 });        
   
 
-it('Validação de espaçonaves associadas ao personagem Beru Whitesun lars OK 100%', () => {
+it('Validação de espaçonaves associadas ao personagem Beru Whitesun lars', () => {
     cy.request({
         method:"GET",
         url: "people/7/"
@@ -1231,7 +1231,7 @@ it('Validação de filmes do personagem R5-D4', () => {
 });
 
 
-it('Validação de espécies associadas ao personagem R5-D4 OK 100%', () => {
+it('Validação de espécies associadas ao personagem R5-D4', () => {
     cy.request({
         method:"GET",
         url: "species/2/"
@@ -1264,7 +1264,7 @@ it('Validação de espécies associadas ao personagem R5-D4 OK 100%', () => {
 });
 
 
-it('Validação de veículos associados ao personagem R5-D4 OK 100%', () => {
+it('Validação de veículos associados ao personagem R5-D4', () => {
     cy.request({
         method:"GET",
         url: "people/8/"
@@ -1276,7 +1276,7 @@ it('Validação de veículos associados ao personagem R5-D4 OK 100%', () => {
 });
   
 
-it('Validação de espaçonaves associadas ao personagem R5-D4 OK 100%', () => {
+it('Validação de espaçonaves associadas ao personagem R5-D4', () => {
     cy.request({
         method:"GET",
         url: "people/8/"
@@ -1288,7 +1288,7 @@ it('Validação de espaçonaves associadas ao personagem R5-D4 OK 100%', () => {
 });
 
 
-it('Validação das informações de Biggs Darklighter 100%', () => {
+it('Validação das informações de Biggs Darklighter', () => {
     cy.request({
         method:"GET",
         url: "people/9/"
@@ -1341,7 +1341,7 @@ it('Validação de filmes do personagem Biggs Darklighter', () => {
 });
 
 
-it('Validação de espécies associadas ao personagem Biggs Darklighter OK 100%', () => {
+it('Validação de espécies associadas ao personagem Biggs Darklighter', () => {
     cy.request({
         method:"GET",
         url: "people/9/"
@@ -1353,7 +1353,7 @@ it('Validação de espécies associadas ao personagem Biggs Darklighter OK 100%'
 });
 
 
-it('Validação de veículos associados ao personagem Biggs Darklighter OK 100%', () => {
+it('Validação de veículos associados ao personagem Biggs Darklighter', () => {
     cy.request({
         method:"GET",
         url: "people/9/"
@@ -1365,7 +1365,7 @@ it('Validação de veículos associados ao personagem Biggs Darklighter OK 100%'
 });       
   
 
-it('Validação de espaçonaves associadas ao personagem Biggs Darklighter OK 100%', () => {
+it('Validação de espaçonaves associadas ao personagem Biggs Darklighter', () => {
     cy.request({
         method:"GET",
         url: "starships/12/"
@@ -1391,7 +1391,7 @@ it('Validação de espaçonaves associadas ao personagem Biggs Darklighter OK 10
         expect(response.body.url).to.eq("https://swapi.dev/api/starships/12/")
     
     })
-    
+
 });    
 
 
