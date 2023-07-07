@@ -17,7 +17,24 @@ it('Validação das informações de Luke Skywalker', () => {
                                                     "https://swapi.dev/api/films/2/",
                                                     "https://swapi.dev/api/films/3/",
                                                     "https://swapi.dev/api/films/6/"
-                                                ])
+                                                                                     ])                                         
+        expect(response.body.species).to.deep.equal([]) 
+
+        expect(response.body.vehicles).to.deep.equal([
+                                                    "https://swapi.dev/api/vehicles/14/",
+                                                    "https://swapi.dev/api/vehicles/30/"
+                                                                                     ])
+        
+        expect(response.body.starships).to.deep.equal([
+                                                    "https://swapi.dev/api/starships/12/",
+                                                    "https://swapi.dev/api/starships/22/" 
+                                                                                     ])     
+                                                                                     
+        expect(response.body.created).to.eq("2014-12-09T13:50:51.644000Z") 
+        expect(response.body.edited).to.eq("2014-12-20T21:17:56.891000Z") 
+        expect(response.body.url).to.eq("https://swapi.dev/api/people/1/")                                                                             
+
+
     })
 });
 
@@ -42,8 +59,16 @@ it('Validação das informações de C-3PO', () => {
                                                     "https://swapi.dev/api/films/3/",
                                                     "https://swapi.dev/api/films/4/",
                                                     "https://swapi.dev/api/films/5/",
-                                                    "https://swapi.dev/api/films/6/"
-                                                ])
+                                                    "https://swapi.dev/api/films/6/" 
+                                                                                     ])
+        expect(response.body.species).to.deep.equal([
+                                                    "https://swapi.dev/api/species/2/"
+                                                                                     ]) 
+        expect(response.body.vehicles).to.deep.equal([])     
+        expect(response.body.starships).to.deep.equal([])  
+        expect(response.body.created).to.eq("2014-12-10T15:10:51.357000Z") 
+        expect(response.body.edited).to.eq("2014-12-20T21:17:50.309000Z") 
+        expect(response.body.url).to.eq("https://swapi.dev/api/people/2/")                                           
     })
 });
 
@@ -69,7 +94,16 @@ it('Validação das informações de R2-D2', () => {
                                                     "https://swapi.dev/api/films/3/",
                                                     "https://swapi.dev/api/films/4/",
                                                     "https://swapi.dev/api/films/5/",
-                                                    "https://swapi.dev/api/films/6/" ])
+                                                    "https://swapi.dev/api/films/6/" 
+                                                                                    ])
+        expect(response.body.species).to.deep.equal([
+                                                    "https://swapi.dev/api/species/2/"
+                                                                                    ]) 
+        expect(response.body.vehicles).to.deep.equal([])     
+        expect(response.body.starships).to.deep.equal([]) 
+        expect(response.body.created).to.eq("2014-12-10T15:11:50.376000Z") 
+        expect(response.body.edited).to.eq("2014-12-20T21:17:50.311000Z") 
+        expect(response.body.url).to.eq("https://swapi.dev/api/people/3/")                                            
     })
 });
 
@@ -94,8 +128,16 @@ it('Validação das informações de Darth Vader', () => {
                                                     "https://swapi.dev/api/films/1/",
                                                     "https://swapi.dev/api/films/2/",
                                                     "https://swapi.dev/api/films/3/",
-                                                    "https://swapi.dev/api/films/6/"])
-
+                                                    "https://swapi.dev/api/films/6/"
+                                                                                    ])
+            expect(response.body.species).to.deep.equal([]) 
+            expect(response.body.vehicles).to.deep.equal([])     
+            expect(response.body.starships).to.deep.equal([
+                                                    "https://swapi.dev/api/starships/13/"
+                                                                                    ])  
+            expect(response.body.created).to.eq("2014-12-10T15:18:20.704000Z") 
+            expect(response.body.edited).to.eq("2014-12-20T21:17:50.313000Z") 
+            expect(response.body.url).to.eq("https://swapi.dev/api/people/4/")                                                                        
 
 
         })
@@ -122,8 +164,16 @@ it('Validação das informações de Leia Organa', () => {
                                                     "https://swapi.dev/api/films/1/",
                                                     "https://swapi.dev/api/films/2/",
                                                     "https://swapi.dev/api/films/3/",
-                                                    "https://swapi.dev/api/films/6/"
-                                                ])
+                                                    "https://swapi.dev/api/films/6/" 
+                                                                                    ])
+        expect(response.body.species).to.deep.equal([]) 
+        expect(response.body.vehicles).to.deep.equal([
+                                                    "https://swapi.dev/api/vehicles/30/"
+                                                                                    ])     
+        expect(response.body.starships).to.deep.equal([])
+        expect(response.body.created).to.eq("2014-12-10T15:20:09.791000Z") 
+        expect(response.body.edited).to.eq("2014-12-20T21:17:50.315000Z") 
+        expect(response.body.url).to.eq("https://swapi.dev/api/people/5/")
     })
 
 
@@ -149,7 +199,14 @@ it('Validação das informações de Owen Lars', () => {
                                                     "https://swapi.dev/api/films/1/",
                                                     "https://swapi.dev/api/films/5/",
                                                     "https://swapi.dev/api/films/6/",
-                                                                                    ])
+                                                                                     ])
+        expect(response.body.species).to.deep.equal([]) 
+        expect(response.body.vehicles).to.deep.equal([])     
+        expect(response.body.starships).to.deep.equal([]) 
+        expect(response.body.created).to.eq("2014-12-10T15:52:14.024000Z") 
+        expect(response.body.edited).to.eq("2014-12-20T21:17:50.317000Z") 
+        expect(response.body.url).to.eq("https://swapi.dev/api/people/6/")                                                                            
+
     })
 
 
@@ -174,7 +231,14 @@ it('Validação das informações de Beru Whitesun lars', () => {
         expect(response.body.films).to.deep.equal([
                                                     "https://swapi.dev/api/films/1/",
                                                     "https://swapi.dev/api/films/5/",
-                                                    "https://swapi.dev/api/films/6/" ])
+                                                    "https://swapi.dev/api/films/6/" 
+                                                                                    ])
+        expect(response.body.species).to.deep.equal([]) 
+        expect(response.body.vehicles).to.deep.equal([])     
+        expect(response.body.starships).to.deep.equal([]) 
+        expect(response.body.created).to.eq("2014-12-10T15:53:41.121000Z") 
+        expect(response.body.edited).to.eq("2014-12-20T21:17:50.319000Z") 
+        expect(response.body.url).to.eq("https://swapi.dev/api/people/7/")                                                                           
     })
 
 
@@ -197,7 +261,16 @@ it('Validação das informações de R5-D4', () => {
         expect(response.body.gender).to.eq("n/a")
         expect(response.body.homeworld).to.eq("https://swapi.dev/api/planets/1/")
         expect(response.body.films).to.deep.equal([
-                                                    "https://swapi.dev/api/films/1/" ])
+                                                    "https://swapi.dev/api/films/1/" 
+                                                                                    ])
+        expect(response.body.species).to.deep.equal([
+                                                    "https://swapi.dev/api/species/2/"
+                                                                                    ]) 
+        expect(response.body.vehicles).to.deep.equal([])     
+        expect(response.body.starships).to.deep.equal([])
+        expect(response.body.created).to.eq("2014-12-10T15:57:50.959000Z") 
+        expect(response.body.edited).to.eq("2014-12-20T21:17:50.321000Z") 
+        expect(response.body.url).to.eq("https://swapi.dev/api/people/8/")                                                                            
     })
 
 
@@ -220,7 +293,16 @@ it('Validação das informações de Biggs Darklighter', () => {
         expect(response.body.gender).to.eq("male")
         expect(response.body.homeworld).to.eq("https://swapi.dev/api/planets/1/")
         expect(response.body.films).to.deep.equal([
-                                                    "https://swapi.dev/api/films/1/" ])
+                                                    "https://swapi.dev/api/films/1/" 
+                                                                                    ])
+        expect(response.body.species).to.deep.equal([]) 
+        expect(response.body.vehicles).to.deep.equal([])     
+        expect(response.body.starships).to.deep.equal([
+                                                    "https://swapi.dev/api/starships/12/"
+                                                                                    ])
+        expect(response.body.created).to.eq("2014-12-10T15:59:50.509000Z") 
+        expect(response.body.edited).to.eq("2014-12-20T21:17:50.323000Z") 
+        expect(response.body.url).to.eq("https://swapi.dev/api/people/9/")                                                                            
     })
 
 
