@@ -144,7 +144,7 @@ Os testes abaixo visam garantir a funcionalidade correta e a integridade dos dad
 
  *1. Crie uma pasta no seu desktop, abra e execute o powershell dentro da mesma*
 
- *2. Obtenha o código da automação através do comando git clone https://github.com/FabioGVL/StarWarsAPI.git no PowerShell *
+ *2. Obtenha o código da automação através do comando git clone https://github.com/FabioGVL/StarWarsAPI.git no PowerShell*
 
  *3. Abra o VsCode, clique em "File" e em seguida em "Open Folder"*
 
@@ -156,7 +156,7 @@ Os testes abaixo visam garantir a funcionalidade correta e a integridade dos dad
 
  *8. Executar o comando “npx cypress open” para abrir o framework (npx está sendo usado para executar cypress).*
 
- *9. Após abrir a pop-up do Cypress, clique em E2E Testing e escolha um dos três navegadores: Chrome, Edge ou Electron *
+ *9. Após abrir a pop-up do Cypress, clique em E2E Testing e escolha um dos três navegadores: Chrome, Edge ou Electron*
 
 *10. Clique em testeStarWarsApi.cy.js*
 
@@ -186,7 +186,7 @@ Os testes abaixo visam garantir a funcionalidade correta e a integridade dos dad
 
  *1. Crie uma pasta no seu desktop, abra e execute o powershell dentro da mesma*
 
- *2. Obtenha o código da automação através do comando git clone https://github.com/FabioGVL/StarWarsAPI.git no PowerShell *
+ *2. Obtenha o código da automação através do comando git clone https://github.com/FabioGVL/StarWarsAPI.git no PowerShell*
 
  *3. Abra o VsCode, clique em "File" e em seguida em "Open Folder"*
 
@@ -198,7 +198,7 @@ Os testes abaixo visam garantir a funcionalidade correta e a integridade dos dad
 
  *8. Executar o comando “npx cypress open” para abrir o framework (npx está sendo usado para executar cypress).*
 
- *9. Após abrir a pop-up do Cypress, clique em E2E Testing e escolha um dos três navegadores: Chrome, Edge ou Electron *
+ *9. Após abrir a pop-up do Cypress, clique em E2E Testing e escolha um dos três navegadores: Chrome, Edge ou Electron*
 
 *10. Clique em testeStarWarsApi.cy.js*
 
@@ -274,7 +274,7 @@ Os testes abaixo visam garantir a funcionalidade correta e a integridade dos dad
 
  *1. Crie uma pasta no seu desktop, abra e execute o powershell dentro da mesma*
 
- *2. Obtenha o código da automação através do comando git clone https://github.com/FabioGVL/StarWarsAPI.git no PowerShell *
+ *2. Obtenha o código da automação através do comando git clone https://github.com/FabioGVL/StarWarsAPI.git no PowerShell*
 
  *3. Abra o VsCode, clique em "File" e em seguida em "Open Folder"*
 
@@ -286,7 +286,7 @@ Os testes abaixo visam garantir a funcionalidade correta e a integridade dos dad
 
  *8. Executar o comando “npx cypress open” para abrir o framework (npx está sendo usado para executar cypress).*
 
- *9. Após abrir a pop-up do Cypress, clique em E2E Testing e escolha um dos três navegadores: Chrome, Edge ou Electron *
+ *9. Após abrir a pop-up do Cypress, clique em E2E Testing e escolha um dos três navegadores: Chrome, Edge ou Electron*
 
 *10. Clique em testeStarWarsApi.cy.js*
 
