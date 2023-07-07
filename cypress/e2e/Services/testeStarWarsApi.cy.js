@@ -3,7 +3,7 @@ it('Validação das informações de Luke Skywalker', () => {
         method:"GET",
         url: "people/1/"
     }).then((response)=>{
-        expect(response.status).to.eq(200)
+        expect(response.status).to.equal(200)
         expect(response.body.name).to.eq("Luke Skywalker")
         expect(response.body.height).to.eq("172")
         expect(response.body.mass).to.eq("77")
@@ -13,20 +13,20 @@ it('Validação das informações de Luke Skywalker', () => {
         expect(response.body.birth_year).to.eq("19BBY")
         expect(response.body.gender).to.eq("male")
         expect(response.body.homeworld).to.eq("https://swapi.dev/api/planets/1/")
-        expect(response.body.films).to.deep.equal([
+        expect(response.body.films).to.deep.eq([
                                                     "https://swapi.dev/api/films/1/",
                                                     "https://swapi.dev/api/films/2/",
                                                     "https://swapi.dev/api/films/3/",
                                                     "https://swapi.dev/api/films/6/"
                                                                                      ])                                         
-        expect(response.body.species).to.deep.equal([]) 
+        expect(response.body.species).to.deep.eq([]) 
 
-        expect(response.body.vehicles).to.deep.equal([
+        expect(response.body.vehicles).to.deep.eq([
                                                     "https://swapi.dev/api/vehicles/14/",
                                                     "https://swapi.dev/api/vehicles/30/"
                                                                                      ])
         
-        expect(response.body.starships).to.deep.equal([
+        expect(response.body.starships).to.deep.eq([
                                                     "https://swapi.dev/api/starships/12/",
                                                     "https://swapi.dev/api/starships/22/" 
                                                                                      ])     
@@ -45,9 +45,9 @@ it('Validação de filmes do personagem Luke SkyWalker', () => {
         method:"GET",
         url: "films/1/"
     }).then((response)=>{
-        expect(response.status).to.eq(200)
+        expect(response.status).to.equal(200)
         expect(response.body.title).to.eq("A New Hope")
-        expect(response.body.episode_id).to.eq(4)
+        expect(response.body.episode_id).to.equal(4)
         expect(response.body.director).to.eq("George Lucas")
         expect(response.body.producer).to.eq("Gary Kurtz, Rick McCallum")
         expect(response.body.release_date).to.eq("1977-05-25")
@@ -61,9 +61,9 @@ it('Validação de filmes do personagem Luke SkyWalker', () => {
          url: "films/2/"})
         
         }).then((response)=>{
-        expect(response.status).to.eq(200)    
+        expect(response.status).to.equal(200)    
         expect(response.body.title).to.eq("The Empire Strikes Back")
-        expect(response.body.episode_id).to.eq(5)
+        expect(response.body.episode_id).to.equal(5)
         expect(response.body.director).to.eq("Irvin Kershner")
         expect(response.body.producer).to.eq("Gary Kurtz, Rick McCallum")
         expect(response.body.release_date).to.eq("1980-05-17")
@@ -77,9 +77,9 @@ it('Validação de filmes do personagem Luke SkyWalker', () => {
         url: "films/3/"})
            
         }).then((response)=>{
-        expect(response.status).to.eq(200)
+        expect(response.status).to.equal(200)
         expect(response.body.title).to.eq("Return of the Jedi")
-        expect(response.body.episode_id).to.eq(6)
+        expect(response.body.episode_id).to.equal(6)
         expect(response.body.director).to.eq("Richard Marquand")
         expect(response.body.producer).to.eq("Howard G. Kazanjian, George Lucas, Rick McCallum")
         expect(response.body.release_date).to.eq("1983-05-25")
@@ -93,9 +93,9 @@ it('Validação de filmes do personagem Luke SkyWalker', () => {
             url: "films/6/"})
            
         }).then((response)=>{
-        expect(response.status).to.eq(200)
+        expect(response.status).to.equal(200)
         expect(response.body.title).to.eq("Revenge of the Sith")
-        expect(response.body.episode_id).to.eq(3)
+        expect(response.body.episode_id).to.equal(3)
         expect(response.body.director).to.eq("George Lucas")
         expect(response.body.producer).to.eq("Rick McCallum")
         expect(response.body.release_date).to.eq("2005-05-19")
@@ -114,7 +114,7 @@ it('Validação de espécies associadas ao personagem Luke SkyWalker', () => {
         method:"GET",
         url: "people/1/"
     }).then((response)=>{
-    expect(response.body.species).to.deep.equal([])
+    expect(response.body.species).to.deep.eq([])
                 
     })
 
@@ -126,7 +126,7 @@ it('Validação de veículos associados ao personagem Luke SkyWalker', () => {
         method:"GET",
         url: "vehicles/14/"
     }).then((response)=>{
-        expect(response.status).to.eq(200)
+        expect(response.status).to.equal(200)
         expect(response.body.name).to.eq("Snowspeeder")
         expect(response.body.model).to.eq("t-47 airspeeder")
         expect(response.body.manufacturer).to.eq("Incom corporation")
@@ -149,7 +149,7 @@ it('Validação de veículos associados ao personagem Luke SkyWalker', () => {
         url: "vehicles/30/"})
            
     }).then((response)=>{
-        expect(response.status).to.eq(200)
+        expect(response.status).to.equal(200)
         expect(response.body.name).to.eq("Imperial Speeder Bike")
         expect(response.body.model).to.eq("74-Z speeder bike")
         expect(response.body.manufacturer).to.eq("Aratech Repulsor Company")
@@ -177,7 +177,7 @@ it('Validação de espaçonaves associadas ao personagem Luke SkyWalker', () => 
         method:"GET",
         url: "starships/12/"
     }).then((response)=>{
-        expect(response.status).to.eq(200)
+        expect(response.status).to.equal(200)
         expect(response.body.name).to.eq("X-wing")
         expect(response.body.model).to.eq("T-65 X-wing")
         expect(response.body.manufacturer).to.eq("Incom Corporation")
@@ -201,7 +201,7 @@ it('Validação de espaçonaves associadas ao personagem Luke SkyWalker', () => 
         method:"GET", 
         url: "starships/22/"})
     }).then((response)=>{
-        expect(response.status).to.eq(200)
+        expect(response.status).to.equal(200)
         expect(response.body.name).to.eq("Imperial shuttle")
         expect(response.body.model).to.eq("Lambda-class T-4a shuttle")
         expect(response.body.manufacturer).to.eq("Sienar Fleet Systems")
@@ -231,7 +231,7 @@ it('Validação das informações de C-3PO', () => {
         method:"GET",
         url: "people/2/"
     }).then((response)=>{
-        expect(response.status).to.eq(200)
+        expect(response.status).to.equal(200)
         expect(response.body.name).to.eq("C-3PO")
         expect(response.body.height).to.eq("167")
         expect(response.body.mass).to.eq("75")
@@ -268,9 +268,9 @@ it('Validação de filmes do personagem C-3PO', () => {
         method:"GET",
         url: "films/1/"
     }).then((response)=>{
-        expect(response.status).to.eq(200)
+        expect(response.status).to.equal(200)
         expect(response.body.title).to.eq("A New Hope")
-        expect(response.body.episode_id).to.eq(4)
+        expect(response.body.episode_id).to.equal(4)
         expect(response.body.director).to.eq("George Lucas")
         expect(response.body.producer).to.eq("Gary Kurtz, Rick McCallum")
         expect(response.body.release_date).to.eq("1977-05-25")
@@ -284,9 +284,9 @@ it('Validação de filmes do personagem C-3PO', () => {
          url: "films/2/"})
         
         }).then((response)=>{
-        expect(response.status).to.eq(200)    
+        expect(response.status).to.equal(200)    
         expect(response.body.title).to.eq("The Empire Strikes Back")
-        expect(response.body.episode_id).to.eq(5)
+        expect(response.body.episode_id).to.equal(5)
         expect(response.body.director).to.eq("Irvin Kershner")
         expect(response.body.producer).to.eq("Gary Kurtz, Rick McCallum")
         expect(response.body.release_date).to.eq("1980-05-17")
@@ -300,9 +300,9 @@ it('Validação de filmes do personagem C-3PO', () => {
             url: "films/3/"})
            
            }).then((response)=>{
-           expect(response.status).to.eq(200)
+           expect(response.status).to.equal(200)
            expect(response.body.title).to.eq("Return of the Jedi")
-           expect(response.body.episode_id).to.eq(6)
+           expect(response.body.episode_id).to.equal(6)
            expect(response.body.director).to.eq("Richard Marquand")
            expect(response.body.producer).to.eq("Howard G. Kazanjian, George Lucas, Rick McCallum")
            expect(response.body.release_date).to.eq("1983-05-25")
@@ -316,9 +316,9 @@ it('Validação de filmes do personagem C-3PO', () => {
             url: "films/4/"})
            
            }).then((response)=>{
-           expect(response.status).to.eq(200)
+           expect(response.status).to.equal(200)
            expect(response.body.title).to.eq("The Phantom Menace")
-           expect(response.body.episode_id).to.eq(1)
+           expect(response.body.episode_id).to.equal(1)
            expect(response.body.director).to.eq("George Lucas")
            expect(response.body.producer).to.eq("Rick McCallum")
            expect(response.body.release_date).to.eq("1999-05-19")
@@ -332,9 +332,9 @@ it('Validação de filmes do personagem C-3PO', () => {
             url: "films/5/"})
            
            }).then((response)=>{
-           expect(response.status).to.eq(200)
+           expect(response.status).to.equal(200)
            expect(response.body.title).to.eq("Attack of the Clones")
-           expect(response.body.episode_id).to.eq(2)
+           expect(response.body.episode_id).to.equal(2)
            expect(response.body.director).to.eq("George Lucas")
            expect(response.body.producer).to.eq("Rick McCallum")
            expect(response.body.release_date).to.eq("2002-05-16")
@@ -348,9 +348,9 @@ it('Validação de filmes do personagem C-3PO', () => {
             url: "films/6/"})
            
            }).then((response)=>{
-           expect(response.status).to.eq(200)
+           expect(response.status).to.equal(200)
            expect(response.body.title).to.eq("Revenge of the Sith")
-           expect(response.body.episode_id).to.eq(3)
+           expect(response.body.episode_id).to.equal(3)
            expect(response.body.director).to.eq("George Lucas")
            expect(response.body.producer).to.eq("Rick McCallum")
            expect(response.body.release_date).to.eq("2005-05-19")
@@ -369,7 +369,7 @@ it('Validação de espécies associadas ao personagem C-3PO', () => {
         method:"GET",
         url: "species/2/"
     }).then((response)=>{
-    expect(response.status).to.eq(200)    
+    expect(response.status).to.equal(200)    
     expect(response.body.name).to.eq("Droid")
     expect(response.body.classification).to.eq("artificial")
     expect(response.body.designation).to.eq("sentient")
@@ -426,7 +426,7 @@ it('Validação das informações de R2-D2', () => {
         method:"GET",
         url: "people/3/"
     }).then((response)=>{
-        expect(response.status).to.eq(200)
+        expect(response.status).to.equal(200)
         expect(response.body.name).to.eq("R2-D2")
         expect(response.body.height).to.eq("96")
         expect(response.body.mass).to.eq("32")
@@ -436,7 +436,7 @@ it('Validação das informações de R2-D2', () => {
         expect(response.body.birth_year).to.eq("33BBY")
         expect(response.body.gender).to.eq("n/a")
         expect(response.body.homeworld).to.eq("https://swapi.dev/api/planets/8/")
-        expect(response.body.films).to.deep.equal([
+        expect(response.body.films).to.deep.eq([
                                                     "https://swapi.dev/api/films/1/",
                                                     "https://swapi.dev/api/films/2/",
                                                     "https://swapi.dev/api/films/3/",
@@ -444,11 +444,11 @@ it('Validação das informações de R2-D2', () => {
                                                     "https://swapi.dev/api/films/9/",
                                                     "https://swapi.dev/api/films/6/" 
                                                                                     ])
-        expect(response.body.species).to.deep.equal([
+        expect(response.body.species).to.deep.eq([
                                                     "https://swapi.dev/api/species/2/"
                                                                                     ]) 
-        expect(response.body.vehicles).to.deep.equal([])     
-        expect(response.body.starships).to.deep.equal([]) 
+        expect(response.body.vehicles).to.deep.eq([])     
+        expect(response.body.starships).to.deep.eq([]) 
         expect(response.body.created).to.eq("2014-12-10T15:11:50.376000Z") 
         expect(response.body.edited).to.eq("2014-12-20T21:17:50.311000Z") 
         expect(response.body.url).to.eq("https://swapi.dev/api/people/3/")   
@@ -463,9 +463,9 @@ it('Validação de filmes do personagem R2-D2', () => {
         method:"GET",
         url: "films/1/"
     }).then((response)=>{
-        expect(response.status).to.eq(200)
+        expect(response.status).to.equal(200)
         expect(response.body.title).to.eq("A New Hope")
-        expect(response.body.episode_id).to.eq(4)
+        expect(response.body.episode_id).to.equal(4)
         expect(response.body.director).to.eq("George Lucas")
         expect(response.body.producer).to.eq("Gary Kurtz, Rick McCallum")
         expect(response.body.release_date).to.eq("1977-05-25")
@@ -479,9 +479,9 @@ it('Validação de filmes do personagem R2-D2', () => {
          url: "films/2/"})
         
         }).then((response)=>{
-        expect(response.status).to.eq(200)    
+        expect(response.status).to.equal(200)    
         expect(response.body.title).to.eq("The Empire Strikes Back")
-        expect(response.body.episode_id).to.eq(5)
+        expect(response.body.episode_id).to.equal(5)
         expect(response.body.director).to.eq("Irvin Kershner")
         expect(response.body.producer).to.eq("Gary Kurtz, Rick McCallum")
         expect(response.body.release_date).to.eq("1980-05-17")
@@ -495,9 +495,9 @@ it('Validação de filmes do personagem R2-D2', () => {
             url: "films/3/"})
            
            }).then((response)=>{
-           expect(response.status).to.eq(200)
+           expect(response.status).to.equal(200)
            expect(response.body.title).to.eq("Return of the Jedi")
-           expect(response.body.episode_id).to.eq(6)
+           expect(response.body.episode_id).to.equal(6)
            expect(response.body.director).to.eq("Richard Marquand")
            expect(response.body.producer).to.eq("Howard G. Kazanjian, George Lucas, Rick McCallum")
            expect(response.body.release_date).to.eq("1983-05-25")
@@ -511,9 +511,9 @@ it('Validação de filmes do personagem R2-D2', () => {
             url: "films/4/"})
            
            }).then((response)=>{
-           expect(response.status).to.eq(200)
+           expect(response.status).to.equal(200)
            expect(response.body.title).to.eq("The Phantom Menace")
-           expect(response.body.episode_id).to.eq(1)
+           expect(response.body.episode_id).to.equal(1)
            expect(response.body.director).to.eq("George Lucas")
            expect(response.body.producer).to.eq("Rick McCallum")
            expect(response.body.release_date).to.eq("1999-05-19")
@@ -524,28 +524,20 @@ it('Validação de filmes do personagem R2-D2', () => {
 
     cy.request({
             method:"GET", 
-            url: "films/5/"})
+            url: "films/9/"})
            
            }).then((response)=>{
-           expect(response.status).to.eq(200)
-           expect(response.body.title).to.eq("Attack of the Clones")
-           expect(response.body.episode_id).to.eq(2)
-           expect(response.body.director).to.eq("George Lucas")
-           expect(response.body.producer).to.eq("Rick McCallum")
-           expect(response.body.release_date).to.eq("2002-05-16")
-           expect(response.body.characters[1]).to.eq("https://swapi.dev/api/people/3/")
-           expect(response.body.created).to.eq("2014-12-20T10:57:57.886000Z")  
-           expect(response.body.edited).to.eq("2014-12-20T20:18:48.516000Z")
-           expect(response.body.url).to.eq("https://swapi.dev/api/films/5/") 
+           expect(response.status).to.equal(404)
+           expect(response.body.detail).to.eq("Not found") 
 
     cy.request({
             method:"GET", 
             url: "films/6/"})
            
            }).then((response)=>{
-           expect(response.status).to.eq(200)
+           expect(response.status).to.equal(200)
            expect(response.body.title).to.eq("Revenge of the Sith")
-           expect(response.body.episode_id).to.eq(3)
+           expect(response.body.episode_id).to.equal(3)
            expect(response.body.director).to.eq("George Lucas")
            expect(response.body.producer).to.eq("Rick McCallum")
            expect(response.body.release_date).to.eq("2005-05-19")
@@ -564,7 +556,7 @@ it('Validação de espécies associadas ao personagem R2-D2 ', () => {
         method:"GET",
         url: "species/2/"
     }).then((response)=>{
-    expect(response.status).to.eq(200)    
+    expect(response.status).to.equal(200)    
     expect(response.body.name).to.eq("Droid")
     expect(response.body.classification).to.eq("artificial")
     expect(response.body.designation).to.eq("sentient")
@@ -622,7 +614,7 @@ it('Validação das informações de Darth Vader', () => {
         method:"GET",
         url: "people/4/"}).then((response)=>{
 
-            expect(response.status).to.eq(200)
+            expect(response.status).to.equal(200)
             expect(response.body.name).to.eq("Darth Vader")
             expect(response.body.height).to.eq("202")
             expect(response.body.mass).to.eq("136")
@@ -632,15 +624,15 @@ it('Validação das informações de Darth Vader', () => {
             expect(response.body.birth_year).to.eq("41.9BBY")
             expect(response.body.gender).to.eq("male")
             expect(response.body.homeworld).to.eq("https://swapi.dev/api/planets/1/")
-            expect(response.body.films).to.deep.equal([
+            expect(response.body.films).to.deep.eq([
                                                     "https://swapi.dev/api/films/1/",
                                                     "https://swapi.dev/api/films/2/",
                                                     "https://swapi.dev/api/films/3/",
                                                     "https://swapi.dev/api/films/6/"
                                                                                     ])
-            expect(response.body.species).to.deep.equal([]) 
-            expect(response.body.vehicles).to.deep.equal([])     
-            expect(response.body.starships).to.deep.equal([
+            expect(response.body.species).to.deep.eq([]) 
+            expect(response.body.vehicles).to.deep.eq([])     
+            expect(response.body.starships).to.deep.eq([
                                                     "https://swapi.dev/api/starships/13/"
                                                                                     ])  
             expect(response.body.created).to.eq("2014-12-10T15:18:20.704000Z") 
@@ -656,9 +648,9 @@ it('Validação de filmes do personagem Darth Vader', () => {
         method:"GET",
         url: "films/1/"
     }).then((response)=>{
-        expect(response.status).to.eq(200)
+        expect(response.status).to.equal(200)
         expect(response.body.title).to.eq("A New Hope")
-        expect(response.body.episode_id).to.eq(4)
+        expect(response.body.episode_id).to.equal(4)
         expect(response.body.director).to.eq("George Lucas")
         expect(response.body.producer).to.eq("Gary Kurtz, Rick McCallum")
         expect(response.body.release_date).to.eq("1977-05-25")
@@ -672,9 +664,9 @@ it('Validação de filmes do personagem Darth Vader', () => {
          url: "films/2/"})
         
         }).then((response)=>{
-        expect(response.status).to.eq(200)    
+        expect(response.status).to.equal(200)    
         expect(response.body.title).to.eq("The Empire Strikes Back")
-        expect(response.body.episode_id).to.eq(5)
+        expect(response.body.episode_id).to.equal(5)
         expect(response.body.director).to.eq("Irvin Kershner")
         expect(response.body.producer).to.eq("Gary Kurtz, Rick McCallum")
         expect(response.body.release_date).to.eq("1980-05-17")
@@ -688,9 +680,9 @@ it('Validação de filmes do personagem Darth Vader', () => {
             url: "films/3/"})
            
            }).then((response)=>{
-           expect(response.status).to.eq(200)
+           expect(response.status).to.equal(200)
            expect(response.body.title).to.eq("Return of the Jedi")
-           expect(response.body.episode_id).to.eq(6)
+           expect(response.body.episode_id).to.equal(6)
            expect(response.body.director).to.eq("Richard Marquand")
            expect(response.body.producer).to.eq("Howard G. Kazanjian, George Lucas, Rick McCallum")
            expect(response.body.release_date).to.eq("1983-05-25")
@@ -705,9 +697,9 @@ it('Validação de filmes do personagem Darth Vader', () => {
             url: "films/6/"})
            
            }).then((response)=>{
-           expect(response.status).to.eq(200)
+           expect(response.status).to.equal(200)
            expect(response.body.title).to.eq("Revenge of the Sith")
-           expect(response.body.episode_id).to.eq(3)
+           expect(response.body.episode_id).to.equal(3)
            expect(response.body.director).to.eq("George Lucas")
            expect(response.body.producer).to.eq("Rick McCallum")
            expect(response.body.release_date).to.eq("2005-05-19")
@@ -726,7 +718,7 @@ it('Validação de espécies associadas ao personagem Darth Vader', () => {
         method:"GET",
         url: "people/4/"
     }).then((response)=>{
-    expect(response.body.species).to.deep.equal([])
+    expect(response.body.species).to.deep.eq([])
                 
     })
 
@@ -738,7 +730,7 @@ it('Validação de veículos associados ao personagem Darth Vader', () => {
         method:"GET",
         url: "people/4/"
     }).then((response)=>{
-    expect(response.body.vehicles).to.deep.equal([])
+    expect(response.body.vehicles).to.deep.eq([])
                 
     })
 
@@ -750,7 +742,7 @@ it('Validação de espaçonaves associadas ao personagem Darth Vader', () => {
         method:"GET",
         url: "starships/13/" 
     }).then((response)=>{
-        expect(response.status).to.eq(200)
+        expect(response.status).to.equal(200)
         expect(response.body.name).to.eq("TIE Advanced x1")
         expect(response.body.model).to.eq("Twin Ion Engine Advanced x1")
         expect(response.body.manufacturer).to.eq("Sienar Fleet Systems")
@@ -780,7 +772,7 @@ it('Validação das informações de Leia Organa', () => {
         method:"GET",
         url: "people/5/"
     }).then((response)=>{
-        expect(response.status).to.eq(200)
+        expect(response.status).to.equal(200)
         expect(response.body.name).to.eq("Leia Organa")
         expect(response.body.height).to.eq("150")
         expect(response.body.mass).to.eq("49")
@@ -790,17 +782,17 @@ it('Validação das informações de Leia Organa', () => {
         expect(response.body.birth_year).to.eq("19BBY")
         expect(response.body.gender).to.eq("female")
         expect(response.body.homeworld).to.eq("https://swapi.dev/api/planets/2/")
-        expect(response.body.films).to.deep.equal([
+        expect(response.body.films).to.deep.eq([
                                                     "https://swapi.dev/api/films/1/",
                                                     "https://swapi.dev/api/films/2/",
                                                     "https://swapi.dev/api/films/3/",
                                                     "https://swapi.dev/api/films/6/" 
                                                                                     ])
-        expect(response.body.species).to.deep.equal([]) 
-        expect(response.body.vehicles).to.deep.equal([
+        expect(response.body.species).to.deep.eq([]) 
+        expect(response.body.vehicles).to.deep.eq([
                                                     "https://swapi.dev/api/vehicles/30/"
                                                                                     ])     
-        expect(response.body.starships).to.deep.equal([])
+        expect(response.body.starships).to.deep.eq([])
         expect(response.body.created).to.eq("2014-12-10T15:20:09:791000Z") 
         expect(response.body.edited).to.eq("2014-12-20T21:17:50.315000Z") 
         expect(response.body.url).to.eq("https://swapi.dev/api/people/5/")
@@ -814,9 +806,9 @@ it('Validação de filmes da personagem Leia Organa ', () => {
             method:"GET",
             url: "films/1/"
         }).then((response)=>{
-            expect(response.status).to.eq(200)
+            expect(response.status).to.equal(200)
             expect(response.body.title).to.eq("A New Hope")
-            expect(response.body.episode_id).to.eq(4)
+            expect(response.body.episode_id).to.equal(4)
             expect(response.body.director).to.eq("George Lucas")
             expect(response.body.producer).to.eq("Gary Kurtz, Rick McCallum")
             expect(response.body.release_date).to.eq("1977-05-25")
@@ -830,9 +822,9 @@ it('Validação de filmes da personagem Leia Organa ', () => {
              url: "films/2/"})
             
             }).then((response)=>{
-            expect(response.status).to.eq(200)    
+            expect(response.status).to.equal(200)    
             expect(response.body.title).to.eq("The Empire Strikes Back")
-            expect(response.body.episode_id).to.eq(5)
+            expect(response.body.episode_id).to.equal(5)
             expect(response.body.director).to.eq("Irvin Kershner")
             expect(response.body.producer).to.eq("Gary Kurtz, Rick McCallum")
             expect(response.body.release_date).to.eq("1980-05-17")
@@ -846,9 +838,9 @@ it('Validação de filmes da personagem Leia Organa ', () => {
                 url: "films/3/"})
                
                }).then((response)=>{
-               expect(response.status).to.eq(200)
+               expect(response.status).to.equal(200)
                expect(response.body.title).to.eq("Return of the Jedi")
-               expect(response.body.episode_id).to.eq(6)
+               expect(response.body.episode_id).to.equal(6)
                expect(response.body.director).to.eq("Richard Marquand")
                expect(response.body.producer).to.eq("Howard G. Kazanjian, George Lucas, Rick McCallum")
                expect(response.body.release_date).to.eq("1983-05-25")
@@ -863,9 +855,9 @@ it('Validação de filmes da personagem Leia Organa ', () => {
                 url: "films/6/"})
                
                }).then((response)=>{
-               expect(response.status).to.eq(200)
+               expect(response.status).to.equal(200)
                expect(response.body.title).to.eq("Revenge of the Sith")
-               expect(response.body.episode_id).to.eq(3)
+               expect(response.body.episode_id).to.equal(3)
                expect(response.body.director).to.eq("George Lucas")
                expect(response.body.producer).to.eq("Rick McCallum")
                expect(response.body.release_date).to.eq("2005-05-19")
@@ -884,7 +876,7 @@ it('Validação de espécies associadas ao personagem Leia Organa', () => {
         method:"GET",
         url: "people/5/"
     }).then((response)=>{
-    expect(response.body.species).to.deep.equal([])
+    expect(response.body.species).to.deep.eq([])
                 
     })
 
@@ -898,7 +890,7 @@ it('Validação de veículos associados ao personagem Leia Organa', () => {
         url: "vehicles/30/"
            
     }).then((response)=>{
-        expect(response.status).to.eq(200)
+        expect(response.status).to.equal(200)
         expect(response.body.name).to.eq("Imperial Speeder Bike")
         expect(response.body.model).to.eq("74-Z speeder bike")
         expect(response.body.manufacturer).to.eq("Aratech Repulsor Company")
@@ -926,7 +918,7 @@ it('Validação de espaçonaves associadas ao personagem Leia Organa', () => {
         method:"GET",
         url: "people/5/"
     }).then((response)=>{
-    expect(response.body.starships).to.deep.equal([])
+    expect(response.body.starships).to.deep.eq([])
                 
     })
 
@@ -938,7 +930,7 @@ it('Validação das informações de Owen Lars', () => {
         method:"GET",
         url: "people/6/"
     }).then((response)=>{
-        expect(response.status).to.eq(200)
+        expect(response.status).to.equal(200)
         expect(response.body.name).to.eq("Owen Lars")
         expect(response.body.height).to.eq("178")
         expect(response.body.mass).to.eq("120")
@@ -948,14 +940,14 @@ it('Validação das informações de Owen Lars', () => {
         expect(response.body.birth_year).to.eq("52BBY")
         expect(response.body.gender).to.eq("male")
         expect(response.body.homeworld).to.eq("https://swapi.dev/api/planets/1/")
-        expect(response.body.films).to.deep.equal([
+        expect(response.body.films).to.deep.eq([
                                                     "https://swapi.dev/api/films/1/",
                                                     "https://swapi.dev/api/films/5/",
                                                     "https://swapi.dev/api/films/6/",
                                                                                      ])
-        expect(response.body.species).to.deep.equal([]) 
-        expect(response.body.vehicles).to.deep.equal([])     
-        expect(response.body.starships).to.deep.equal([]) 
+        expect(response.body.species).to.deep.eq([]) 
+        expect(response.body.vehicles).to.deep.eq([])     
+        expect(response.body.starships).to.deep.eq([]) 
         expect(response.body.created).to.eq("2014-12-10T15:52:14.024000Z") 
         expect(response.body.edited).to.eq("2014-12-20T21:17:50.317000Z") 
         expect(response.body.url).to.eq("https://swapi.dev/api/people/6/")                                                                            
@@ -970,9 +962,9 @@ it('Validação de filmes da personagem Owen Lars', () => {
             method:"GET",
             url: "films/1/"
         }).then((response)=>{
-            expect(response.status).to.eq(200)
+            expect(response.status).to.equal(200)
             expect(response.body.title).to.eq("A New Hope")
-            expect(response.body.episode_id).to.eq(4)
+            expect(response.body.episode_id).to.equal(4)
             expect(response.body.director).to.eq("George Lucas")
             expect(response.body.producer).to.eq("Gary Kurtz, Rick McCallum")
             expect(response.body.release_date).to.eq("1977-05-25")
@@ -988,9 +980,9 @@ it('Validação de filmes da personagem Owen Lars', () => {
             url: "films/5/"})
                
             }).then((response)=>{
-            expect(response.status).to.eq(200)
+            expect(response.status).to.equal(200)
             expect(response.body.title).to.eq("Attack of the Clones")
-            expect(response.body.episode_id).to.eq(2)
+            expect(response.body.episode_id).to.equal(2)
             expect(response.body.director).to.eq("George Lucas")
             expect(response.body.producer).to.eq("Rick McCallum")
             expect(response.body.release_date).to.eq("2002-05-16")
@@ -1005,9 +997,9 @@ it('Validação de filmes da personagem Owen Lars', () => {
             url: "films/6/"})
                
             }).then((response)=>{
-            expect(response.status).to.eq(200)
+            expect(response.status).to.equal(200)
             expect(response.body.title).to.eq("Revenge of the Sith")
-            expect(response.body.episode_id).to.eq(3)
+            expect(response.body.episode_id).to.equal(3)
             expect(response.body.director).to.eq("George Lucas")
             expect(response.body.producer).to.eq("Rick McCallum")
             expect(response.body.release_date).to.eq("2005-05-19")
@@ -1026,7 +1018,7 @@ it('Validação de espécies associadas ao personagem Owen Lars', () => {
         method:"GET",
         url: "people/6/"
     }).then((response)=>{
-    expect(response.body.species).to.deep.equal([])
+    expect(response.body.species).to.deep.eq([])
                 
     })
 
@@ -1038,7 +1030,7 @@ it('Validação de veículos associados ao personagem Owen Lars', () => {
         method:"GET",
         url: "people/6/"
     }).then((response)=>{
-    expect(response.body.vehicles).to.deep.equal([])
+    expect(response.body.vehicles).to.deep.eq([])
                 
     })
 
@@ -1050,7 +1042,7 @@ it('Validação de espaçonaves associadas ao personagem Owen Lars', () => {
         method:"GET",
         url: "people/6/"
     }).then((response)=>{
-    expect(response.body.starships).to.deep.equal([])
+    expect(response.body.starships).to.deep.eq([])
                 
     })
 
@@ -1062,7 +1054,7 @@ it('Validação das informações de Beru Whitesun lars', () => {
         method:"GET",
         url: "people/7/"
     }).then((response)=>{
-        expect(response.status).to.eq(200)
+        expect(response.status).to.equal(200)
         expect(response.body.name).to.eq("Beru Whitesun lars")
         expect(response.body.height).to.eq("165")
         expect(response.body.mass).to.eq("75")
@@ -1072,14 +1064,14 @@ it('Validação das informações de Beru Whitesun lars', () => {
         expect(response.body.birth_year).to.eq("47BBY")
         expect(response.body.gender).to.eq("female")
         expect(response.body.homeworld).to.eq("https://swapi.dev/api/planets/1/")
-        expect(response.body.films).to.deep.equal([
+        expect(response.body.films).to.deep.eq([
                                                     "https://swapi.dev/api/films/3/",
                                                     "https://swapi.dev/api/films/5/",
                                                     "https://swapi.dev/api/films/6/" 
                                                                                     ])
-        expect(response.body.species).to.deep.equal([]) 
-        expect(response.body.vehicles).to.deep.equal([])     
-        expect(response.body.starships).to.deep.equal([]) 
+        expect(response.body.species).to.deep.eq([]) 
+        expect(response.body.vehicles).to.deep.eq([])     
+        expect(response.body.starships).to.deep.eq([]) 
         expect(response.body.created).to.eq("2014-12-10T15:53:41.121000Z") 
         expect(response.body.edited).to.eq("2014-12-20T21:17:50.319000Z") 
         expect(response.body.url).to.eq("https://swapi.dev/api/people/7/")                                                                           
@@ -1090,29 +1082,20 @@ it('Validação das informações de Beru Whitesun lars', () => {
 
 it('Validação de filmes da personagem Beru Whitesun lars', () => {
     cy.request({
-            method:"GET",
-            url: "films/1/"
-        }).then((response)=>{
-            expect(response.status).to.eq(200)
-            expect(response.body.title).to.eq("A New Hope")
-            expect(response.body.episode_id).to.eq(4)
-            expect(response.body.director).to.eq("George Lucas")
-            expect(response.body.producer).to.eq("Gary Kurtz, Rick McCallum")
-            expect(response.body.release_date).to.eq("1977-05-25")
-            expect(response.body.characters[6]).to.eq("https://swapi.dev/api/people/7/")
-            expect(response.body.created).to.eq("2014-12-10T14:23:31.880000Z")  
-            expect(response.body.edited).to.eq("2014-12-20T19:49:45.256000Z")
-            expect(response.body.url).to.eq("https://swapi.dev/api/films/1/")
+        method:"GET", 
+        url: "films/3/"
+            }).then((response)=>{
+            expect(response.status).to.equal(200)
+            expect(response.body.characters).to.deep.eq([])
     
 
     cy.request({
             method:"GET", 
             url: "films/5/"})
-               
             }).then((response)=>{
-            expect(response.status).to.eq(200)
+            expect(response.status).to.equal(200)
             expect(response.body.title).to.eq("Attack of the Clones")
-            expect(response.body.episode_id).to.eq(2)
+            expect(response.body.episode_id).to.equal(2)
             expect(response.body.director).to.eq("George Lucas")
             expect(response.body.producer).to.eq("Rick McCallum")
             expect(response.body.release_date).to.eq("2002-05-16")
@@ -1125,11 +1108,10 @@ it('Validação de filmes da personagem Beru Whitesun lars', () => {
     cy.request({
             method:"GET", 
             url: "films/6/"})
-               
             }).then((response)=>{
-            expect(response.status).to.eq(200)
+            expect(response.status).to.equal(200)
             expect(response.body.title).to.eq("Revenge of the Sith")
-            expect(response.body.episode_id).to.eq(3)
+            expect(response.body.episode_id).to.equal(3)
             expect(response.body.director).to.eq("George Lucas")
             expect(response.body.producer).to.eq("Rick McCallum")
             expect(response.body.release_date).to.eq("2005-05-19")
@@ -1149,7 +1131,7 @@ it('Validação de espécies associadas ao personagem Beru Whitesun lars', () =>
         method:"GET",
         url: "people/7/"
     }).then((response)=>{
-    expect(response.body.species).to.deep.equal([])
+    expect(response.body.species).to.deep.eq([])
                 
     })
 
@@ -1161,7 +1143,7 @@ it('Validação de veículos associados ao personagem Beru Whitesun lars', () =>
         method:"GET",
         url: "people/7/"
     }).then((response)=>{
-    expect(response.body.vehicles).to.deep.equal([])
+    expect(response.body.vehicles).to.deep.eq([])
                 
     })
 
@@ -1173,7 +1155,7 @@ it('Validação de espaçonaves associadas ao personagem Beru Whitesun lars', ()
         method:"GET",
         url: "people/7/"
     }).then((response)=>{
-    expect(response.body.starships).to.deep.equal([])
+    expect(response.body.starships).to.deep.eq([])
                 
     })
 
@@ -1184,8 +1166,8 @@ it('Validação das informações de R5-D4', () => {
     cy.request({
         method:"GET",
         url: "people/8/"
-    }).then((response)=>{
-        expect(response.status).to.eq(200)
+        }).then((response)=>{
+        expect(response.status).to.equal(200)
         expect(response.body.name).to.eq("R5-D4")
         expect(response.body.height).to.eq("97")
         expect(response.body.mass).to.eq("32")
@@ -1195,14 +1177,14 @@ it('Validação das informações de R5-D4', () => {
         expect(response.body.birth_year).to.eq("unknown")
         expect(response.body.gender).to.eq("n/a")
         expect(response.body.homeworld).to.eq("https://swapi.dev/api/planets/1/")
-        expect(response.body.films).to.deep.equal([
+        expect(response.body.films).to.deep.eq([
                                                     "https://swapi.dev/api/films/5/" 
                                                                                     ])
-        expect(response.body.species).to.deep.equal([
+        expect(response.body.species).to.deep.eq([
                                                     "https://swapi.dev/api/species/2/"
                                                                                     ]) 
-        expect(response.body.vehicles).to.deep.equal([])     
-        expect(response.body.starships).to.deep.equal([])
+        expect(response.body.vehicles).to.deep.eq([])     
+        expect(response.body.starships).to.deep.eq([])
         expect(response.body.created).to.eq("2014-12-10T15:57:50:959000Z") 
         expect(response.body.edited).to.eq("2014-12-20T21:17:50.321000Z") 
         expect(response.body.url).to.eq("https://swapi.dev/api/people/8/")  
@@ -1213,21 +1195,14 @@ it('Validação das informações de R5-D4', () => {
 
 
 it('Validação de filmes do personagem R5-D4', () => {
+    
     cy.request({
-            method:"GET",
-            url: "films/1/"
+        method:"GET", 
+        url: "films/5/"
+               
         }).then((response)=>{
-            expect(response.status).to.eq(200)
-            expect(response.body.title).to.eq("A New Hope")
-            expect(response.body.episode_id).to.eq(4)
-            expect(response.body.director).to.eq("George Lucas")
-            expect(response.body.producer).to.eq("Gary Kurtz, Rick McCallum")
-            expect(response.body.release_date).to.eq("1977-05-25")
-            expect(response.body.characters[7]).to.eq("https://swapi.dev/api/people/8/")
-            expect(response.body.created).to.eq("2014-12-10T14:23:31.880000Z")  
-            expect(response.body.edited).to.eq("2014-12-20T19:49:45.256000Z")
-            expect(response.body.url).to.eq("https://swapi.dev/api/films/1/")
-
+        expect(response.status).to.equal(200)
+        expect(response.body.characters).to.deep.eq([])
     })
 
 });
@@ -1238,7 +1213,7 @@ it('Validação de espécies associadas ao personagem R5-D4', () => {
         method:"GET",
         url: "species/2/"
     }).then((response)=>{
-    expect(response.status).to.eq(200)    
+    expect(response.status).to.equal(200)    
     expect(response.body.name).to.eq("Droid")
     expect(response.body.classification).to.eq("artificial")
     expect(response.body.designation).to.eq("sentient")
@@ -1270,8 +1245,8 @@ it('Validação de veículos associados ao personagem R5-D4', () => {
     cy.request({
         method:"GET",
         url: "people/8/"
-    }).then((response)=>{
-    expect(response.body.vehicles).to.deep.equal([])
+        }).then((response)=>{
+        expect(response.body.vehicles).to.deep.eq([])
                 
     })
 
@@ -1282,8 +1257,8 @@ it('Validação de espaçonaves associadas ao personagem R5-D4', () => {
     cy.request({
         method:"GET",
         url: "people/8/"
-    }).then((response)=>{
-    expect(response.body.starships).to.deep.equal([])
+        }).then((response)=>{
+        expect(response.body.starships).to.deep.eq([])
                 
     })
 
@@ -1294,8 +1269,8 @@ it('Validação das informações de Biggs Darklighter', () => {
     cy.request({
         method:"GET",
         url: "people/9/"
-    }).then((response)=>{
-        expect(response.status).to.eq(200)
+        }).then((response)=>{
+        expect(response.status).to.equal(200)
         expect(response.body.name).to.eq("Biggs Darklighter")
         expect(response.body.height).to.eq("183")
         expect(response.body.mass).to.eq("84")
@@ -1308,9 +1283,9 @@ it('Validação das informações de Biggs Darklighter', () => {
         expect(response.body.films).to.deep.equal([
                                                     "https://swapi.dev/api/films/1/" 
                                                                                     ])
-        expect(response.body.species).to.deep.equal([]) 
-        expect(response.body.vehicles).to.deep.equal([])     
-        expect(response.body.starships).to.deep.equal([
+        expect(response.body.species).to.deep.eq([]) 
+        expect(response.body.vehicles).to.deep.eq([])     
+        expect(response.body.starships).to.deep.eq([
                                                     "https://swapi.dev/api/starships/12/"
                                                                                     ])
         expect(response.body.created).to.eq("2014-12-10T15:59:50.509000Z") 
@@ -1326,8 +1301,8 @@ it('Validação de filmes do personagem Biggs Darklighter', () => {
     cy.request({
             method:"GET",
             url: "films/1/"
-        }).then((response)=>{
-            expect(response.status).to.eq(200)
+            }).then((response)=>{
+            expect(response.status).to.equal(200)
             expect(response.body.title).to.eq("A New Hope")
             expect(response.body.episode_id).to.eq(4)
             expect(response.body.director).to.eq("George Lucas")
@@ -1347,8 +1322,8 @@ it('Validação de espécies associadas ao personagem Biggs Darklighter', () => 
     cy.request({
         method:"GET",
         url: "people/9/"
-    }).then((response)=>{
-    expect(response.body.species).to.deep.equal([])
+        }).then((response)=>{
+        expect(response.body.species).to.deep.eq([])
                 
     })
 
@@ -1359,8 +1334,8 @@ it('Validação de veículos associados ao personagem Biggs Darklighter', () => 
     cy.request({
         method:"GET",
         url: "people/9/"
-    }).then((response)=>{
-    expect(response.body.vehicles).to.deep.equal([])
+        }).then((response)=>{
+        expect(response.body.vehicles).to.deep.eq([])
                 
     })
 
@@ -1371,8 +1346,8 @@ it('Validação de espaçonaves associadas ao personagem Biggs Darklighter', () 
     cy.request({
         method:"GET",
         url: "starships/12/"
-    }).then((response)=>{
-        expect(response.status).to.eq(200)
+        }).then((response)=>{
+        expect(response.status).to.equal(200)
         expect(response.body.name).to.eq("X-wing")
         expect(response.body.model).to.eq("T-65 X-wing")
         expect(response.body.manufacturer).to.eq("Incom Corporation")
@@ -1402,8 +1377,8 @@ it('Validação de limite de entrada - ID inexistente 0', () => {
         failOnStatusCode: false,
         method:"GET",
         url: "people/0/"
-    }).then((response)=>{
-        expect(response.status).to.eq(404)
+        }).then((response)=>{
+        expect(response.status).to.equal(404)
         expect(response.body.detail).to.eq("Not found")
 
     })
@@ -1416,8 +1391,8 @@ it('Validação de limite de entrada - ID inexistente 500', () => {
         failOnStatusCode: false,
         method:"GET",
         url: "people/500/"
-    }).then((response)=>{
-        expect(response.status).to.eq(404)
+        }).then((response)=>{
+        expect(response.status).to.equal(404)
         expect(response.body.detail).to.eq("Not found")
 
     })
@@ -1430,8 +1405,8 @@ it('Validação de limite de entrada - Página 0', () => {
         failOnStatusCode: false,
         method:"GET",
         url: "/people/?page=0"
-    }).then((response)=>{
-        expect(response.status).to.eq(404)
+        }).then((response)=>{
+        expect(response.status).to.equal(404)
         expect(response.body.detail).to.eq("Not found")
 
     })
@@ -1444,8 +1419,8 @@ it('Validação de limite de entrada - Página 10', () => {
         failOnStatusCode: false,
         method:"GET",
         url: "/people/?page=10"
-    }).then((response)=>{
-        expect(response.status).to.eq(404)
+        }).then((response)=>{
+        expect(response.status).to.equal(404)
         expect(response.body.detail).to.eq("Not found")
 
     })
@@ -1457,9 +1432,9 @@ it('Validação de paginação e checagem de personagens por página - 1', () =>
     cy.request({
         method:"GET",
         url: "/people/?page=1"
-    }).then((response)=>{
-        expect(response.status).to.eq(200)
-        expect(response.body.count).to.eq(82)
+        }).then((response)=>{
+        expect(response.status).to.equal(200)
+        expect(response.body.count).to.equal(82)
         expect(response.body.next).to.eq("https://swapi.dev/api/people/?page=2")
         expect(response.body.previous).to.eq(null)
         expect(response.body.results[0].name).to.eq("Luke Skywalker")
@@ -1492,9 +1467,9 @@ it('Validação de paginação e listagem de personagens por página - 2', () =>
     cy.request({
         method:"GET",
         url: "/people/?page=2"
-    }).then((response)=>{
-        expect(response.status).to.eq(200)
-        expect(response.body.count).to.eq(82)
+        }).then((response)=>{
+        expect(response.status).to.equal(200)
+        expect(response.body.count).to.equal(82)
         expect(response.body.next).to.eq("https://swapi.dev/api/people/?page=3")
         expect(response.body.previous).to.eq("https://swapi.dev/api/people/?page=1")
         expect(response.body.results[0].name).to.eq("Anakin Skywalker")
@@ -1531,8 +1506,8 @@ it('Validação de paginação e listagem de personagens por página - 3', () =>
         method:"GET",
         url: "/people/?page=3"
     }).then((response)=>{
-        expect(response.status).to.eq(200)
-        expect(response.body.count).to.eq(82)
+        expect(response.status).to.equal(200)
+        expect(response.body.count).to.equal(82)
         expect(response.body.next).to.eq("https://swapi.dev/api/people/?page=4")
         expect(response.body.previous).to.eq("https://swapi.dev/api/people/?page=2")
         expect(response.body.results[0].name).to.eq("Boba Fett")
@@ -1566,8 +1541,8 @@ it('Validação de paginação e listagem de personagens por página - 4', () =>
         method:"GET",
         url: "/people/?page=4"
     }).then((response)=>{
-        expect(response.status).to.eq(200)
-        expect(response.body.count).to.eq(82)
+        expect(response.status).to.equal(200)
+        expect(response.body.count).to.equal(82)
         expect(response.body.next).to.eq("https://swapi.dev/api/people/?page=5")
         expect(response.body.previous).to.eq("https://swapi.dev/api/people/?page=3")
         expect(response.body.results[0].name).to.eq("Qui-Gon Jinn")
@@ -1600,9 +1575,9 @@ it('Validação de paginação e listagem de personagens por página - 5', () =>
     cy.request({
         method:"GET",
         url: "/people/?page=5"
-    }).then((response)=>{
-        expect(response.status).to.eq(200)
-        expect(response.body.count).to.eq(82)
+        }).then((response)=>{
+        expect(response.status).to.equal(200)
+        expect(response.body.count).to.equal(82)
         expect(response.body.next).to.eq("https://swapi.dev/api/people/?page=6")
         expect(response.body.previous).to.eq("https://swapi.dev/api/people/?page=4")
         expect(response.body.results[0].name).to.eq("Quarsh Panaka")
@@ -1635,9 +1610,9 @@ it('Validação de paginação e listagem de personagens por página - 6', () =>
     cy.request({
         method:"GET",
         url: "/people/?page=6"
-    }).then((response)=>{
-        expect(response.status).to.eq(200)
-        expect(response.body.count).to.eq(82)
+        }).then((response)=>{
+        expect(response.status).to.equal(200)
+        expect(response.body.count).to.equal(82)
         expect(response.body.next).to.eq("https://swapi.dev/api/people/?page=7")
         expect(response.body.previous).to.eq("https://swapi.dev/api/people/?page=5")
         expect(response.body.results[0].name).to.eq("Ki-Adi-Mundi")
@@ -1670,9 +1645,9 @@ it('Validação de paginação e listagem de personagens por página - 7', () =>
     cy.request({
         method:"GET",
         url: "/people/?page=7"
-    }).then((response)=>{
-        expect(response.status).to.eq(200)
-        expect(response.body.count).to.eq(82)
+        }).then((response)=>{
+        expect(response.status).to.equal(200)
+        expect(response.body.count).to.equal(82)
         expect(response.body.next).to.eq("https://swapi.dev/api/people/?page=8")
         expect(response.body.previous).to.eq("https://swapi.dev/api/people/?page=6")
         expect(response.body.results[0].name).to.eq("Cliegg Lars")
@@ -1705,9 +1680,9 @@ it('Validação de paginação e listagem de personagens por página - 8', () =>
     cy.request({
         method:"GET",
         url: "/people/?page=8"
-    }).then((response)=>{
-        expect(response.status).to.eq(200)
-        expect(response.body.count).to.eq(82)
+        }).then((response)=>{
+        expect(response.status).to.equal(200)
+        expect(response.body.count).to.equal(82)
         expect(response.body.next).to.eq("https://swapi.dev/api/people/?page=9")
         expect(response.body.previous).to.eq("https://swapi.dev/api/people/?page=7")
         expect(response.body.results[0].name).to.eq("Lama Su")
@@ -1741,9 +1716,9 @@ it('Validação de paginação e listagem de personagens por página - 9', () =>
     cy.request({
         method:"GET",
         url: "/people/?page=9"
-    }).then((response)=>{
-        expect(response.status).to.eq(200)
-        expect(response.body.count).to.eq(82)
+        }).then((response)=>{
+        expect(response.status).to.equal(200)
+        expect(response.body.count).to.equal(82)
         expect(response.body.next).to.eq(null)
         expect(response.body.previous).to.eq("https://swapi.dev/api/people/?page=8")
         expect(response.body.results[0].name).to.eq("Sly Moore")
