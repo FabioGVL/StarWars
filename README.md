@@ -11,56 +11,81 @@ Os testes abaixo visam garantir a funcionalidade correta e a integridade dos dad
 
 *Dado que acesso o endpoint `/people/{id}/`*
 
-*E insiro ao final do endpoint um número de 1 a 83 (exceto 17)*
+*Quando inserir ao final do endpoint um ID do número 1 ao 83 e realizar a busca*
 
-*E realizo a busca*
-
-*Quando a API me retorna os dados unitários do personagem de ID buscado*
-
-*Então verifico que o resultado obtido corresponde ao resultado esperado*
+*Então a API deverá retornar os dados unitários corretos do personagem de ID buscado*
 
 
 
 
 
-### Validação do comportamento da API com ID inexistente 
+### Recuperação e validação de espécies
+
+*Dado que acesso o endpoint `/species/{id}/`*
+
+*Quando inserir ao final do endpoint o ID da espécie associada a um personagem especifico e realizar a busca*
+
+*Então a API deverá retornar os dados unitários corretos da espécie buscada*
+
+
+
+
+
+### Recuperação e validação de veículos
+
+*Dado que acesso o endpoint `/vehicles/{id}/`*
+
+*Quando inserir ao final do endpoint o ID do veículo associado a um personagem específico e realizar a busca*
+
+*Então a API deverá retornar os dados unitários corretos do veículo buscado*
+
+
+
+
+
+
+### Recuperação e validação de espaçonaves
+
+*Dado que acesso o endpoint `/starships/{id}/`*
+
+*Quando inserir ao final do endpoint o ID da espaçonave associado a um personagem específico e realizar a busca*
+
+*Então a API deverá retornar os dados unitários corretos do veículo buscado*
+
+
+
+
+
+### Validação do comportamento da API com ID inexistente - Limite de entrada
 
 *Dado que acesso o endpoint `/people/{id}/`*
 
-*E insiro um ID inexistente*
+*Quando inserir um ID inexistente e realizar a busca*
 
-*Quando realizo a busca*
-
-*Então verifico que a API retorna a mensagem de erro `"Not found"`*
+*Então a API deverá retornar a mensagem de erro `"Not found"`*
 
 
 
 
 
-### Validação da paginação 
+### Validação do comportamento da API com página inexistente - Limite de entrada
 
-*Dado acesso o endpoint `/people/?page=3`*
+*Dado que acesso o endpoint `/people/?page={id}`*
 
-*E efetuo a busca*
+*Quando inserir um ID inexistente e realizar a busca*
 
-*Quando a API retorna as informações da página*
-
-*Então verifico que as informações de paginação retornadas estão de acordo com o resultado esperado*
+*Então a API deverá retornar a mensagem de erro `"Not found"`*
 
 
 
 
+### Validação da paginação e listagem de personagens por página
 
-### Validação da listagem de personagens
+*Dado que acesso o endpoint `/people/?page={id}`*
 
-*Dado que insiro o endpoint "/people/?page=9"*
+*Quando efetuar a busca e a API retornar as informações da página*
 
-*E efetuo a busca*
-
-*Quando a API retorna as informações da página*
-
-*Então verifico que a listagem de personagens e contagem geral de personagens está de acordo com o resultado esperado*
-
+*Então as informações de paginação/personagens retornadas deverão estar de acordo com o resultado esperado*
 
 
 
@@ -69,17 +94,15 @@ Os testes abaixo visam garantir a funcionalidade correta e a integridade dos dad
 
 ### Personagem inexistente
 
-*Dado que acesso o endpoint "/people/83"*
+*Dado que acesso o endpoint "/people/83" e efetuo a busca*
 
-*E efetuo a busca*
-
-*E a API me retorna as informações da página e do personagem `Tion Medon`*
+*E a API retorna o usuário existente `Tion Medon`*
 
 *E verifico que no campo COUNT constam 82 personagens*
 
 *Quando realizo a contagem geral dos personagens*
 
-*Então verifico que os personagens estão mapeados do ID 1 ao 83, porém, o personagem e ID de número 17 não existem*
+*Então verifico que os personagens estão mapeados do ID 1 ao 83, porém, o personagem de ID número 17 não existe*
 
 
 
